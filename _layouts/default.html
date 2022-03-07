@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang | default: "en-US" }}" class="h-full bg-gray-100">
+<html lang="{{ site.lang | default: "en-US" }}" class="h-full bg-bodybackground">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta charset="utf-8">
@@ -7,9 +7,13 @@
 <link rel="stylesheet" href="https://use.typekit.net/ato5yse.css">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
+/* OHS THEME ------------------------------------------------------ */
 tailwind.config = {
   theme: {
     extend: {
+      colors: {
+        'bodybackground': '#F5F4F2',
+      },
       fontFamily: {
         sans: ['mr-eaves-xl-sans', 'sans-serif']
       },
@@ -30,6 +34,19 @@ tailwind.config = {
     },
   }
 }
+/* FAKE COMPANY THEME ---------------------------------------------
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        'bodybackground': '#edc7bf',
+      },
+      fontFamily: {
+        sans: ['Courier New', 'sans-serif']
+      }
+    },
+  }
+} */
 </script>
 </head>
 <body class="h-full">
