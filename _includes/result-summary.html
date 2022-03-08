@@ -1,3 +1,4 @@
+{% if include.layout == '1' %}
 <div class="px-4 pb-5 sm:pb-6">
   <div class="flex text-center text-xl font-bold mt-4">
     <div class="border-b-8 border-red-600" style="width: 4%;">3</div>
@@ -9,17 +10,17 @@
 </div>
 
 <dl class="grid grid-cols-1 overflow-hidden divide-y divide-gray-200 md:grid-cols-5 md:divide-y-0 md:divide-x border-t border-gray-200">
-  <div class="px-5 py-3">
+  <div class="px-5 py-3 flex md:block justify-between">
     <dt class="text-base font-normal text-gray-900 flex items-center">
       <div class="inline-flex rounded-full bg-red-600 w-2 h-2 mr-2">&nbsp;</div>
       <div>Clinical Low</div>
     </dt>
     <dd class="flex justify-between items-baseline md:block lg:flex">
-      <div class="flex items-baseline text-xl font-semibold">
+      <div class="flex items-baseline text-xl font-semibold mr-2">
         3
-        <span class="ml-2 text-sm font-medium text-gray-500"> from 2 </span>
+        <span class="ml-2 text-sm font-medium text-gray-500 hidden"> from 2 </span>
       </div>
-      <div class="inline-flex items-baseline px-2 py-0.5 rounded-full text-sm font-medium bg-red-100 text-red-800 md:mt-2 lg:mt-0">
+      <div class="inline-flex items-baseline px-2 py-0.5 rounded-full text-sm font-medium bg-red-100 text-red-800 md:mt-2 lg:mt-0 w-9">
         <!-- Heroicon name: solid/arrow-sm-up -->
         <svg class="-ml-1 mr-0.5 flex-shrink-0 self-center h-5 w-5 text-red-600" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
           <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
@@ -30,15 +31,15 @@
     </dd>
   </div>
 
-  <div class="px-5 py-3">
+  <div class="px-5 py-3 flex md:block justify-between">
     <dt class="text-base font-normal text-gray-900 flex items-center">
       <div class="inline-flex rounded-full bg-yellow-400 w-2 h-2 mr-2">&nbsp;</div>
       <div>Functional Low</div>
     </dt>
     <dd class="flex justify-between items-baseline md:block lg:flex">
-      <div class="flex items-baseline text-xl font-semibold">
+      <div class="flex items-baseline text-xl font-semibold mr-2">
         8
-        <span class="ml-2 text-sm font-medium text-gray-500"> from 9 </span>
+        <span class="ml-2 text-sm font-medium text-gray-500 hidden"> from 9 </span>
       </div>
 
       <div class="inline-flex items-baseline px-2 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800 md:mt-2 lg:mt-0">
@@ -52,15 +53,15 @@
     </dd>
   </div>
 
-  <div class="px-5 py-3">
+  <div class="px-5 py-3 flex md:block justify-between">
     <dt class="text-base font-normal text-gray-900 flex items-center">
       <div class="inline-flex rounded-full bg-green-600 w-2 h-2 mr-2">&nbsp;</div>
       <div>Optimal Range</div>
     </dt>
     <dd class="flex justify-between items-baseline md:block lg:flex">
-      <div class="flex items-baseline text-xl font-semibold">
+      <div class="flex items-baseline text-xl font-semibold mr-2">
         49
-        <span class="ml-2 text-sm font-medium text-gray-500"> from 39 </span>
+        <span class="ml-2 text-sm font-medium text-gray-500 hidden"> from 39 </span>
       </div>
       <div class="inline-flex items-baseline px-2 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800 md:mt-2 lg:mt-0">
         <!-- Heroicon name: solid/arrow-sm-down -->
@@ -73,15 +74,15 @@
     </dd>
   </div>
 
-  <div class="px-5 py-3">
+  <div class="px-5 py-3 flex md:block justify-between">
     <dt class="text-base font-normal text-gray-900 flex items-center">
       <div class="inline-flex rounded-full bg-yellow-400 w-2 h-2 mr-2">&nbsp;</div>
       <div>Functional High</div>
     </dt>
     <dd class="flex justify-between items-baseline md:block lg:flex">
-      <div class="flex items-baseline text-xl font-semibold">
+      <div class="flex items-baseline text-xl font-semibold mr-2">
         11
-        <span class="ml-2 text-sm font-medium text-gray-500"> from 16 </span>
+        <span class="ml-2 text-sm font-medium text-gray-500 hidden"> from 16 </span>
       </div>
 
       <div class="inline-flex items-baseline px-2 py-0.5 rounded-full text-sm font-medium bg-red-100 text-red-800 md:mt-2 lg:mt-0">
@@ -95,15 +96,15 @@
     </dd>
   </div>
 
-  <div class="px-5 py-3">
+  <div class="px-5 py-3 flex md:block justify-between">
     <dt class="text-base font-normal text-gray-900 flex items-center">
       <div class="inline-flex rounded-full bg-red-600 w-2 h-2 mr-2">&nbsp;</div>
       <div>Clinical High</div>
     </dt>
     <dd class="flex justify-between items-baseline md:block lg:flex">
-      <div class="flex items-baseline text-xl font-semibold">
+      <div class="flex items-baseline text-xl font-semibold mr-2">
         4
-        <span class="ml-2 text-sm font-medium text-gray-500"> from 5 </span>
+        <span class="ml-2 text-sm font-medium text-gray-500 hidden"> from 5 </span>
       </div>
 
       <div class="inline-flex items-baseline px-2 py-0.5 rounded-full text-sm font-medium bg-green-100 text-green-800 md:mt-2 lg:mt-0">
@@ -118,3 +119,280 @@
   </div>
 
 </dl>
+{% elsif include.layout == 'hello' %}
+<div class="px-4 pb-5 sm:pb-6">
+  <div class="flex">
+    <div class="text-xs border-b-8 border-green-600" style="width: 65.3%;" data-count="49">Optimal</div>
+    <div class="text-xs border-b-8 border-yellow-400" style="width: 25.3%;" data-count="19">Functional</div>
+    <div class="text-xs border-b-8 border-red-600" style="width: 9.3%;" data-count="7">
+      <div class="rotate-45">Clinical</div>
+    </div>
+  </div>
+</div>
+  <div class="flex">
+    <div class="text-xs border-b-8 border-green-600" style="width: 65.3%;" data-count="49">Optimal</div>
+    <div class="text-xs border-b-8 border-yellow-400" style="width: 25.3%;" data-count="19">Functional</div>
+    <div class="text-xs border-b-8 border-red-600" style="width: 9.3%;" data-count="7">
+      <div class="rotate-45">Clinical</div>
+    </div>
+  </div>
+</div>
+hi
+<div class="px-4 pb-5 sm:pb-6">
+  <div class="flex justify-between text-center text-xl font-bold">
+    <div class="text-lg">Optimal</div>
+    <div class="text-lg">Functional</div>
+    <div class="text-lg">Clinical</div>
+  </div>
+  <div class="flex text-center text-xl font-bold">
+    <div class="text-xs bg-green-600" style="width: 65.3%;" data-count="49">&nbsp;</div>
+    <div class="text-xs bg-yellow-400" style="width: 10.6%;" data-count="8">&nbsp;</div>
+    <div class="text-xs bg-yellow-400" style="width: 14.6%;" data-count="11">&nbsp;</div>
+    <div class="text-xs bg-red-600" style="width: 4%;" data-count="3">&nbsp;</div>
+    <div class="text-xs bg-red-600" style="width: 5.3%;" data-count="4">&nbsp;</div>
+  </div>
+</div>
+Clinical - Identifies more serious health concerns.
+Functional - Values outside the Optimal Range of results but not yet on the Clinical level.
+Optimal Range - Identifies the most ideal values for blood/urine results.
+
+<dl class="grid grid-cols-1 md:grid-cols-5 overflow-hidden">
+  <div class="px-4 py-3 flex md:block justify-between border-l-4 md:border-t-2 border-red-600 bg-red-100">
+    <dt class="text-base font-normal text-gray-900">
+      Clinical Low
+    </dt>
+    <dd class="flex justify-between items-baseline md:block lg:flex">
+      <div class="flex items-baseline text-xl font-semibold mr-2">
+        3
+        <span class="ml-2 text-sm font-medium text-gray-500 hidden"> from 2 </span>
+      </div>
+      <div class="inline-flex items-baseline pl-2 text-sm font-medium text-red-500">
+        <span class="sr-only"> Increased by </span>
+        1
+        <!-- Heroicon name: solid/arrow-sm-up -->
+        <svg class="-mr-1 ml-0.5 flex-shrink-0 self-center h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+        </svg>
+      </div>
+    </dd>
+  </div>
+
+  <div class="px-4 py-3 flex md:block justify-between border-l-4 md:border-t-2 border-yellow-400 bg-yellow-100">
+    <dt class="text-base font-normal text-gray-900 flex items-center">
+      Functional Low
+    </dt>
+    <dd class="flex justify-between items-baseline md:block lg:flex">
+      <div class="flex items-baseline text-xl font-semibold mr-2">
+        8
+        <span class="ml-2 text-sm font-medium text-gray-500 hidden"> from 9 </span>
+      </div>
+
+      <div class="inline-flex items-baseline pl-2 text-sm font-medium text-green-500">
+        <span class="sr-only"> Decreased by </span>
+        1
+        <!-- Heroicon name: solid/arrow-sm-up -->
+        <svg class="-mr-1 ml-0.5 flex-shrink-0 self-center h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+        </svg>
+      </div>
+    </dd>
+  </div>
+
+  <div class="px-5 py-3 flex md:block justify-between border-l-4 md:border-t-2 border-green-600 bg-green-100">
+    <dt class="text-base font-normal text-gray-900 flex items-center">
+      Optimal Range
+    </dt>
+    <dd class="flex justify-between items-baseline md:block lg:flex">
+      <div class="flex items-baseline text-xl font-semibold mr-2">
+        49
+        <span class="ml-2 text-sm font-medium text-gray-500 hidden"> from 39 </span>
+      </div>
+      <div class="inline-flex items-baseline pl-2 text-sm font-medium text-green-500">
+        <span class="sr-only"> Increased by </span>
+        10
+        <!-- Heroicon name: solid/arrow-sm-down -->
+        <svg class="-mr-1 ml-0.5 flex-shrink-0 self-center h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+        </svg>
+      </div>
+    </dd>
+  </div>
+
+  <div class="px-5 py-3 flex md:block justify-between border-l-4 md:border-t-2 border-yellow-400 bg-yellow-100">
+    <dt class="text-base font-normal text-gray-900 flex items-center">
+      Functional High
+    </dt>
+    <dd class="flex justify-between items-baseline md:block lg:flex">
+      <div class="flex items-baseline text-xl font-semibold mr-2">
+        11
+        <span class="ml-2 text-sm font-medium text-gray-500 hidden"> from 16 </span>
+      </div>
+
+      <div class="inline-flex items-baseline pl-2 text-sm font-medium text-red-500">
+        <span class="sr-only"> Increased by </span>
+        5
+        <!-- Heroicon name: solid/arrow-sm-down -->
+        <svg class="-mr-1 ml-0.5 flex-shrink-0 self-center h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+        </svg>
+      </div>
+    </dd>
+  </div>
+
+  <div class="px-5 py-3 flex md:block justify-between border-l-4 md:border-t-2 border-red-600 bg-red-100">
+    <dt class="text-base font-normal text-gray-900 flex items-center">
+      Clinical High
+    </dt>
+    <dd class="flex justify-between items-baseline md:block lg:flex">
+      <div class="flex items-baseline text-xl font-semibold mr-2">
+        4
+        <span class="ml-2 text-sm font-medium text-gray-500 hidden"> from 5 </span>
+      </div>
+
+      <div class="inline-flex items-baseline pl-2 text-sm font-medium text-green-500">
+        <span class="sr-only"> Decreased by </span>
+        1
+        <!-- Heroicon name: solid/arrow-sm-up -->
+        <svg class="-mr-1 ml-0.5 flex-shrink-0 self-center h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+        </svg>
+      </div>
+    </dd>
+  </div>
+
+</dl>
+<div class="px-4 pb-5 sm:pb-6">
+  <p class="leading-6 mb-5">The Optimal Range defines the most ideal values for blood/urine results. Results outside this range move into a warning range (functional) and can accelerate to clinical levels which can identify more serious health concerns. This program will help move your levels into the Optimal Range.</p>
+
+  <div class="flex">
+    <div class="text-xs overflow-hidden" style="width: 65.3%;" data-count="49">Optimal</div>
+    <div class="text-xs overflow-hidden" style="width: 25.3%;" data-count="19">Functional</div>
+    <div class="text-xs overflow-hidden" style="width: 9.3%;" data-count="7">Clinical</div>
+  </div>
+  <div class="flex">
+    <div class="text-xs bg-green-600" style="width: 65.3%;" data-count="49">&nbsp;</div>
+    <div class="text-xs bg-yellow-400" style="width: 25.3%;" data-count="19">&nbsp;</div>
+    <div class="text-xs bg-red-600" style="width: 9.3%;" data-count="7">&nbsp;</div>
+  </div>
+</div>
+
+<dl class="grid grid-cols-1 md:grid-cols-3 overflow-hidden">
+
+  <div class="px-5 py-3 flex md:block justify-between md:border-t-2 border-green-600">
+    <dt class="text-base font-normal text-gray-900 flex items-center">
+      Optimal
+    </dt>
+    <dd class="flex justify-between items-baseline md:block lg:flex">
+      <div class="flex items-baseline text-xl font-semibold mr-2">
+        49
+        <span class="ml-2 text-sm font-medium text-gray-500"> from 39 </span>
+      </div>
+      <div class="inline-flex items-baseline pl-2 text-sm font-medium text-green-500">
+        <span class="sr-only"> Increased by </span>
+        10
+        <!-- Heroicon name: solid/arrow-sm-up -->
+        <svg class="-mr-1 ml-0.5 flex-shrink-0 self-center h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+        </svg>
+      </div>
+    </dd>
+  </div>
+
+  <div class="px-4 py-3 flex md:block justify-between md:border-t-2 border-yellow-400">
+    <dt class="text-base font-normal text-gray-900 flex items-center">
+      Functional
+    </dt>
+    <dd class="flex justify-between items-baseline md:block lg:flex">
+      <div class="flex items-baseline text-xl font-semibold mr-2">
+        19
+        <span class="ml-2 text-sm font-medium text-gray-500"> from 25 </span>
+      </div>
+
+      <div class="inline-flex items-baseline pl-2 text-sm font-medium text-green-500">
+        <span class="sr-only"> Decreased by </span>
+        6
+        <!-- Heroicon name: solid/arrow-sm-down -->
+        <svg class="-mr-1 ml-0.5 flex-shrink-0 self-center h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+        </svg>
+      </div>
+    </dd>
+  </div>
+
+  <div class="px-4 py-3 flex md:block justify-between md:border-t-2 border-red-600">
+    <dt class="text-base font-normal text-gray-900">
+      Clinical
+    </dt>
+    <dd class="flex justify-between items-baseline md:block lg:flex">
+      <div class="flex items-baseline text-xl font-semibold mr-2">
+        7
+        <span class="ml-2 text-sm font-medium text-gray-500 hidden"> from 7 </span>
+      </div>
+    </dd>
+  </div>
+
+</dl>
+{% else %}
+
+<div>
+  <dl class="grid gap-5 grid-cols-1 md:grid-cols-3 overflow-hidden mb-6">
+
+    <div class="px-5 py-3 flex md:block justify-between bg-white shadow rounded-lg overflow-hidden">
+      <dd class="flex justify-between items-baseline w-full">
+        <div class="grow text-xl font-normal text-gray-900">
+          Optimal
+        </div>
+        <div class="inline-flex items-baseline pr-2 text-sm font-medium text-green-500">
+          <span class="sr-only"> Increased by </span>
+          10
+          <!-- Heroicon name: solid/arrow-sm-up -->
+          <svg class="-mr-1 ml-0.5 flex-shrink-0 self-center h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="inline-flex items-center justify-center h-14 w-14 rounded-full bg-green-600">
+          <span class="text-2xl font-medium leading-none text-white">49</span>
+        </div>
+      </dd>
+    </div>
+
+    <div class="px-4 py-3 flex md:block justify-between bg-white shadow rounded-lg overflow-hidden">
+      <dd class="flex justify-between items-baseline w-full">
+        <div class="grow text-xl font-normal text-gray-900">
+          Functional
+        </div>
+        <div class="inline-flex items-baseline pr-2 text-sm font-medium text-green-500">
+          <span class="sr-only"> Decreased by </span>
+          6
+          <!-- Heroicon name: solid/arrow-sm-down -->
+          <svg class="-mr-1 ml-0.5 flex-shrink-0 self-center h-5 w-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+            <path fill-rule="evenodd" d="M14.707 10.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 111.414-1.414L9 12.586V5a1 1 0 012 0v7.586l2.293-2.293a1 1 0 011.414 0z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <div class="inline-flex items-center justify-center h-14 w-14 rounded-full bg-yellow-400">
+          <span class="text-2xl font-medium leading-none text-white [text-shadow:0_1px_2px_rgba(0,0,0,0.2)]">19</span>
+        </div>
+      </dd>
+    </div>
+
+    <div class="px-4 py-3 flex md:block justify-between bg-white shadow rounded-lg overflow-hidden">
+      <dd class="flex justify-between items-baseline w-full">
+        <div class="grow text-xl font-normal text-gray-900">
+          Clinical
+        </div>
+        <div class="inline-flex items-center justify-center h-14 w-14 rounded-full bg-red-600">
+          <span class="text-2xl font-medium leading-none text-white">7</span>
+        </div>
+      </dd>
+    </div>
+
+  </dl>
+</div>
+<div class="mt-5 shadow rounded-lg mb-4 overflow-hidden">
+  <div class="flex">
+    <div class="text-xs bg-green-600" style="width: 65.5%;" data-count="49">&nbsp;</div>
+    <div class="text-xs bg-yellow-400" style="width: 25.5%;" data-count="19">&nbsp;</div>
+    <div class="text-xs bg-red-600" style="width: 9%;" data-count="7">&nbsp;</div>
+  </div>
+</div>
+{% endif %}
