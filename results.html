@@ -16,9 +16,10 @@ title: "Functional Health Lab Test Results"
     </div>
     <p class="leading-6">The Optimal Range defines the most ideal values for blood/urine results. Results outside this range move into a warning range (functional) and can accelerate to clinical levels which can identify more serious health concerns. This program will help move your levels into the Optimal Range.</p>
   </div>
+
+  {% include result-summary.html %}
 </div>
 
-{% include result-summary.html %}
 
 <div class="flex flex-col">
   <div class="">
@@ -27,7 +28,7 @@ title: "Functional Health Lab Test Results"
         <table class="min-w-full border-separate" style="border-spacing: 0">
         <thead class="bg-white">
             <tr>
-              <th colspan="8" class="sticky top-10 md:top-0 z-10 h-10 bg-white border-t">
+              <th colspan="8" class="sticky top-10 md:top-0 z-10 h-10 bg-white border-t rounded-t-lg overflow-hidden">
               <!-- search -->
               <div class="flex h-full bg-white">
                 <div class="flex-1 px-4 flex justify-between">
@@ -51,13 +52,13 @@ title: "Functional Health Lab Test Results"
             </th>
           </tr>
           <tr>
-            <th scope="col" class="hidden md:table-cell sticky top-10 z-10 bg-gray-50 px-2 md:py-2 px-3 border-t border-b text-left text-xs md:text-sm font-normal text-gray-500 leading-none">Test</th>
-            <th scope="col" class="hidden md:table-cell sticky top-10 z-10 bg-gray-50 px-2 md:py-2 px-3 border-t border-b text-center text-xs md:text-sm font-normal text-gray-500 leading-none border-r-2" colspan="2">Current</th>
-            <th scope="col" class="sticky top-20 md:top-10 z-10 bg-gray-50 px-2 md:py-2 px-3 border-t border-b text-center text-xs md:text-sm font-normal text-gray-500 leading-none">C<span class="hidden md:inline">linical</span> Low</th>
-            <th scope="col" class="sticky top-20 md:top-10 z-10 bg-gray-50 px-2 md:py-2 px-3 border-t border-b text-center text-xs md:text-sm font-normal text-gray-500 leading-none">F<span class="hidden md:inline">unctional</span> Low</th>
-            <th scope="col" class="sticky top-20 md:top-10 z-10 bg-gray-50 px-2 md:py-2 px-3 border-t border-b text-center text-xs md:text-sm font-normal text-gray-500 leading-none">Optimal<span class="hidden md:inline"> Range</span></th>
-            <th scope="col" class="sticky top-20 md:top-10 z-10 bg-gray-50 px-2 md:py-2 px-3 border-t border-b text-center text-xs md:text-sm font-normal text-gray-500 leading-none">F<span class="hidden md:inline">unctional</span> High</th>
-            <th scope="col" class="sticky top-20 md:top-10 z-10 bg-gray-50 px-2 md:py-2 px-3 border-t border-b text-center text-xs md:text-sm font-normal text-gray-500 leading-none">C<span class="hidden md:inline">linical</span> High</th>
+            <th scope="col" class="hidden md:table-cell sticky top-10 z-10 bg-gray-50 px-2 md:py-2 px-3 border-t border-b text-left text-xs font-normal text-gray-500 leading-none">Test</th>
+            <th scope="col" class="hidden md:table-cell sticky top-10 z-10 bg-gray-50 px-2 md:py-2 px-3 border-t border-b text-center text-xs  font-normal text-gray-500 leading-none border-r-2" colspan="2">Current</th>
+            <th scope="col" class="sticky top-20 md:top-10 z-10 bg-gray-50 px-2 md:py-2 px-3 border-t border-b text-center text-xs font-normal text-gray-500 leading-none">C<span class="hidden md:inline">linical</span> Low</th>
+            <th scope="col" class="sticky top-20 md:top-10 z-10 bg-gray-50 px-2 md:py-2 px-3 border-t border-b text-center text-xs font-normal text-gray-500 leading-none">F<span class="hidden md:inline">unctional</span> Low</th>
+            <th scope="col" class="sticky top-20 md:top-10 z-10 bg-gray-50 px-2 md:py-2 px-3 border-t border-b text-center text-xs font-normal text-gray-500 leading-none">Optimal<span class="hidden md:inline"> Range</span></th>
+            <th scope="col" class="sticky top-20 md:top-10 z-10 bg-gray-50 px-2 md:py-2 px-3 border-t border-b text-center text-xs font-normal text-gray-500 leading-none">F<span class="hidden md:inline">unctional</span> High</th>
+            <th scope="col" class="sticky top-20 md:top-10 z-10 bg-gray-50 px-2 md:py-2 px-3 border-t border-b text-center text-xs font-normal text-gray-500 leading-none">C<span class="hidden md:inline">linical</span> High</th>
           </tr>
         </thead>
         <tbody class="bg-white divide-y divide-gray-200">

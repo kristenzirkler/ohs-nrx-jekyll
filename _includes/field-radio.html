@@ -1,0 +1,37 @@
+<div>
+  <fieldset class="mt-2">
+    <label for="{{ include.name | slugify }}" class="text-base font-bold text-gray-900">{{ include.name }}</label>
+    <div class="grid grid-cols-3 gap-3 sm:grid-cols-5">
+      <!--
+        Active: "ring-2 ring-offset-2 ring-indigo-500"
+        Checked: "bg-indigo-600 border-transparent text-white hover:bg-indigo-700", Not Checked: "bg-white border-gray-200 text-gray-900 hover:bg-gray-50"
+      -->
+      {% assign options = include.options | split: "," %}
+      {% for option in options %}
+      <label class="cursor-pointer border rounded-md py-3 px-3 flex items-center justify-center text-sm font-medium text-gray-800  sm:flex-1 focus:outline-none hover:ring-2 ring-indigo-500">
+        <input type="radio" name="{{ include.name | slugify }}" value="{{ option }}" class="sr-only" aria-labelledby="{{ option |slugify }}">
+        <p id="{{ option | slugify }}">{{ option }}</p>
+      </label>
+      {% endfor %}
+
+    </div>
+  </fieldset>
+</div>
+{% comment %}
+<div>
+  <label class="text-base font-bold text-gray-900">{{ include.name }}</label>
+  <fieldset class="mt-2">
+    <legend class="sr-only">{{ include.name }}</legend>
+    <div class="space-y-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-10">
+      {% assign options = include.options | split: "," %}
+      {% for option in options %}
+      
+      <div class="flex items-center">
+        <input id="{{ option | slugify }}" name="{{ include.name | slugify }}" type="radio" class="focus:ring-buttonColor h-4 w-4 text-buttonColor border-gray-300">
+        <label for="{{ option | slugify }}" class="ml-3 block text-sm font-medium text-gray-700"> {{ option }} </label>
+      </div>
+      {% endfor %}
+    </div>
+  </fieldset>
+</div>
+{% endcomment %}

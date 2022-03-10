@@ -1,34 +1,18 @@
 <div>
   <fieldset>
-  <legend class="font-bold text-gray-700 mb-2">Checkboxes</legend>
-  <div class="space-y-5">
+  <legend class="font-bold text-gray-700 mb-2">{{ include.name }}</legend>
+  <div class="{% if include.columns %}grid grid-cols-{{ include.columns}} gap-2{% else %}space-y-2 {% endif %}">
+    {% assign options = include.options | split: "," %}
+    {% for option in options %}
     <div class="relative flex items-start">
       <div class="flex items-center h-5">
-        <input id="comments" aria-describedby="comments-description" name="comments" type="checkbox" class="focus:ring-buttonColor h-4 w-4 text-buttonColor border-gray-300 rounded">
+        <input id="{{ option | slugify }}" name="{{ option | slugify }}" type="checkbox" class="focus:ring-buttonColor h-4 w-4 text-buttonColor border-gray-300 rounded">
       </div>
       <div class="ml-3 text-sm">
-        <label for="comments" class="font-bold text-gray-700">New comments</label>
-        <span id="comments-description" class="text-gray-500"><span class="sr-only">New comments </span>so you always know what's happening.</span>
+        <label for="{{ option | slugify }}" class="text-gray-700">{{ option }}</label>
       </div>
     </div>
-    <div class="relative flex items-start">
-      <div class="flex items-center h-5">
-        <input id="candidates" aria-describedby="candidates-description" name="candidates" type="checkbox" class="focus:ring-buttonColor h-4 w-4 text-buttonColor border-gray-300 rounded">
-      </div>
-      <div class="ml-3 text-sm">
-        <label for="candidates" class="font-bold text-gray-700">New candidates</label>
-        <span id="candidates-description" class="text-gray-500"><span class="sr-only">New candidates </span>who apply for any open postings.</span>
-      </div>
-    </div>
-    <div class="relative flex items-start">
-      <div class="flex items-center h-5">
-        <input id="offers" aria-describedby="offers-description" name="offers" type="checkbox" class="focus:ring-buttonColor h-4 w-4 text-buttonColor border-gray-300 rounded">
-      </div>
-      <div class="ml-3 text-sm">
-        <label for="offers" class="font-bold text-gray-700">Offers</label>
-        <span id="offers-description" class="text-gray-500"><span class="sr-only">Offers </span>when they are accepted or rejected by candidates.</span>
-      </div>
-    </div>
+    {% endfor %}
   </div>
 </fieldset>
 </div>

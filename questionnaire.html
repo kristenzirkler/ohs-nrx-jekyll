@@ -15,14 +15,15 @@ title: "Questionnaire for Firstname"
     </div>
     <div class="mt-5 md:mt-0 md:col-span-2">
         <div class="shadow rounded-md bg-white">
-          <div class="px-4 py-5 space-y-6 sm:p-6">
-            {% include field-text.html %}
+          <div class="p-4 space-y-4 sm:space-y-3">
+            {% include field-text.html name="Text Field" %}
+            {% include field-checkboxes.html name="Checkboxes" options="New comments,New candidates,Offers" %}
+            {% include field-radio.html name="Radio" options="New comments,New candidates,Offers" %}
             {% include field-single-select.html %}
-            {% include field-checkboxes.html %}
             <hr>
-            {% include field-toggle.html %}
+            {% include field-toggle.html name="Toggle This On?" offLabel="No" onLabel="Yes" %}
             <hr>
-            {% include field-range.html %}
+            {% include field-range.html name="Range" %}
           </div>
         </div>
     </div>
