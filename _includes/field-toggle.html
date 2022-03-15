@@ -1,9 +1,11 @@
 {% assign slug = include.name | slugify | replace: "-", "" %}
-<div class="flex justify-between cursor-pointer" x-data="{ {{ slug }}toggle: '0' }" @click="{{ slug }}toggle === '0' ? {{ slug }}toggle = '1' : {{ slug }}toggle = '0'">
-  <div class="font-bold text-gray-700">{{ include.name }}</div>
+<div class="pt-3 pb-4 flex md:block justify-between cursor-pointer" x-data="{ {{ slug }}toggle: '0' }" @click="{{ slug }}toggle === '0' ? {{ slug }}toggle = '1' : {{ slug }}toggle = '0'">
+  <div class="text-lg leading-tight font-bold text-gray-900 mb-2">{{ include.name }} {% if include.subtext %}
+  <span class="text-sm text-gray-500 font-normal"> {{ include.subtext }}</span>
+  {% endif %}</div>
 
   <div class="flex">
-    {% if include.offLabel %}<div class="mr-2">{{ include.offLabel }}</div>{% endif %}
+    {% if include.offLabel %}<div class="text-gray-700 mr-2">{{ include.offLabel }}</div>{% endif %}
     <!-- Enabled: "bg-buttonColor", Not Enabled: "bg-gray-200" -->
     <button type="button" 
       class="relative inline-flex flex-shrink-0 h-6 w-11 border-2 border-transparent rounded-full cursor-pointer transition-colors ease-in-out duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-buttonColor" role="switch" aria-checked="false"
@@ -29,7 +31,7 @@
         </span>
       </span>
     </button>
-    {% if include.onLabel %}<div class="ml-2">{{ include.onLabel }}</div>{% endif %}
+    {% if include.onLabel %}<div class="text-gray-700 ml-2">{{ include.onLabel }}</div>{% endif %}
   </div>
 </div>
 

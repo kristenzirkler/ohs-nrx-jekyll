@@ -30,6 +30,21 @@ title: "Theme Examples"
     <p class="text-7xl">text 7xl</p>
   </div>
 </div>
+<div class="bg-white shadow rounded-lg">
+  <div class="px-4 py-5 sm:p-6">
+    <h1 class="text-xl font-semibold text-gray-900">Fields</h1>
+    <div class="px-4 py-5 sm:p-6 divide-y divide-gray-200 max-w-3xl m-auto">
+      {% include field-text.html name="Text Field" %}
+      {% include field-checkboxes.html name="Checkboxes" options="New comments,New candidates,Offers" columns=2 %}
+      {% include field-radio.html name="Radio" options="New comments,New candidates,Offers" %}
+      {% include field-single-select.html %}
+      <hr>
+      {% include field-toggle.html name="Toggle This On?" offLabel="No" onLabel="Yes" %}
+      <hr>
+      {% include field-range.html name="Range" %}
+    </div>
+  </div>
+</div>
 
 
 
