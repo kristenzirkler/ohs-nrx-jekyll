@@ -2,7 +2,7 @@
 {% assign theme = 'ohs' %}
 <link href="https://cdn.jsdelivr.net/npm/daisyui@2.6.4/dist/full.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
-<!-- do i need these? ,typography,aspect-ratio,line-clamp -->
+<!-- do i need these? aspect-ratio,line-clamp -->
 
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
@@ -14,10 +14,10 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
-        'bodybackground': '#F5F4F2',
-        'accentMain': '#324770',
-        'buttonColor': '#297E55',
-        'buttonColorHover': '#195036',
+        'body': '#F5F4F2',
+        'accent-primary': '#324770',
+        'button-primary': '#297E55',
+        'button-primary-hover': '#195036',
       },
       fontFamily: {
         sans: ['mr-eaves-xl-sans', 'sans-serif']
@@ -49,10 +49,10 @@ tailwind.config = {
   theme: {
     extend: {
       colors: {
-        'bodybackground': '#999999',
-        'accentMain': '#eec42d',
-        'buttonColor': '#000000',
-        'buttonColorHover': '#333333',
+        'body': '#999999',
+        'accent-primary': '#eec42d',
+        'button-primary': '#000000',
+        'button-primary-hover': '#333333',
       },
       fontFamily: {
         sans: ['Montserrat', 'sans-serif']

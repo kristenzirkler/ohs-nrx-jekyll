@@ -11,7 +11,7 @@
       -->
       {% assign options = include.options | split: "," %}
       {% for option in options %}
-      <label class="cursor-pointer border rounded-md py-3 px-3 flex items-center justify-center sm:flex-1 focus:outline-none hover:ring-2 ring-buttonColor">
+      <label class="cursor-pointer border rounded-md py-3 px-3 flex items-center justify-center sm:flex-1 focus:outline-none hover:ring-2 ring-button-primary">
         <input type="radio" name="{{ include.name | slugify }}" value="{{ option }}" class="sr-only" aria-labelledby="{{ option |slugify }}">
         <p class="block text-sm text-center leading-tight font-medium text-gray-700" id="{{ option | slugify }}">{{ option }}</p>
       </label>
@@ -29,7 +29,7 @@
       {% for option in options %}
       
       <div class="flex items-center">
-        <input id="{{ option | slugify }}" name="{{ include.name | slugify }}" type="radio" class="focus:ring-buttonColor h-4 w-4 text-buttonColor border-gray-300">
+        <input id="{{ option | slugify }}" name="{{ include.name | slugify }}" type="radio" class="focus:ring-button-primary h-4 w-4 text-button-primary border-gray-300">
         <label for="{{ option | slugify }}" class="ml-3 block text-sm font-medium text-gray-700"> {{ option }} </label>
       </div>
       {% endfor %}

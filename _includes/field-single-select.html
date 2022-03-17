@@ -65,7 +65,7 @@
               @mouseleave="focusedOptionIndex = null"
               role="option"
               :aria-selected="focusedOptionIndex === index"
-              :class="{ 'text-white bg-buttonColor': index === focusedOptionIndex, 'text-gray-900': index !== focusedOptionIndex }"
+              :class="{ 'text-white bg-button-primary': index === focusedOptionIndex, 'text-gray-900': index !== focusedOptionIndex }"
               class="relative py-2 pl-3 text-gray-900 cursor-default select-none pr-9"
             >
               <span x-text="Object.values(options)[index]"
@@ -74,8 +74,8 @@
               ></span>
               <span
                 x-show="key === value"
-                :class="{ 'text-white': index === focusedOptionIndex, 'text-buttonColor': index !== focusedOptionIndex }"
-                class="absolute inset-y-0 right-0 flex items-center pr-4 text-buttonColor"
+                :class="{ 'text-white': index === focusedOptionIndex, 'text-button-primary': index !== focusedOptionIndex }"
+                class="absolute inset-y-0 right-0 flex items-center pr-4 text-button-primary"
               >
                 <svg class="w-5 h-5" viewBox="0 0 20 20" fill="currentColor">
                     <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>

@@ -5,7 +5,7 @@
     <span class="text-sm text-gray-500" id="email-optional">Optional</span>
   </div>
   <div class="mt-1">
-    <input type="email" name="email" id="email" class="shadow-sm focus:ring-buttonColor focus:border-buttonColor block w-full sm:text-sm border-gray-300 rounded-md" placeholder="you@example.com" aria-describedby="email-optional">
+    <input type="email" name="email" id="email" class="shadow-sm focus:ring-button-primary focus:border-button-primary block w-full sm:text-sm border-gray-300 rounded-md" placeholder="you@example.com" aria-describedby="email-optional">
   </div>
 </div>
 {% else %}
@@ -13,7 +13,7 @@
   <div class="sm:grid sm:grid-cols-3 sm:gap-4 sm:items-start">
     <label for="{{ include.name | slugify }}" class="block text-sm font-bold text-gray-700 sm:mt-px sm:pt-2">{{ include.name }}</label>
     <div class="mt-1 sm:mt-0 sm:col-span-2">
-      <input id="{{ include.name | slugify }}" name="{{ include.name | slugify }}" type="{% if include.type %}{{ include.type }}{% else %}text{% endif %}" required class="text-gray-900 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-buttonColor focus:border-buttonColor sm:text-sm" value="{{ include.value }}" placeholder="{{ include.name }}">
+      <input id="{{ include.name | slugify }}" name="{{ include.name | slugify }}" type="{% if include.type %}{{ include.type }}{% else %}text{% endif %}" required class="text-gray-900 appearance-none block w-full px-3 py-2 border border-gray-300 rounded-md placeholder-gray-400 focus:outline-none focus:ring-button-primary focus:border-button-primary sm:text-sm" value="{{ include.value }}" placeholder="{{ include.name }}">
     </div>
   </div>
 </div>
