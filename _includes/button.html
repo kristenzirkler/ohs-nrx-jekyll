@@ -1,8 +1,8 @@
-{% assign sharedClasses = "border border-transparent shadow-sm text-lg font-bold rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2" %}
+{% assign sharedClasses = "border border-transparent text-lg font-bold rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2" %}
 {% if include.disabled %}
-{% assign bgClasses = "bg-gray-200 hover:bg-gray-200 focus:ring-gray-200" %}
+{% assign bgClasses = "bg-gray-200 hover:bg-gray-200 focus:ring-gray-200 cursor-not-allowed" %}
 {% else %}
-{% assign bgClasses = "bg-button-primary hover:bg-button-primary-hover focus:ring-button-primary" %}
+{% assign bgClasses = "bg-button-primary hover:bg-button-primary-hover focus:ring-button-primary shadow-sm" %}
 {% endif %}
 {% if include.icon %}
   {% if include.link %}<a href="{{ site.baseurl }}/{{ include.link }}"{% else %}<button{% endif %} type="button" class="flex justify-between items-center h-12 px-4 w-full {{ sharedClasses }} {{ bgClasses }}  {{ include.classes }}" >
