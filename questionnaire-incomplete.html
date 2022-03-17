@@ -1,18 +1,19 @@
 ---
 layout: default
 nav: questionnaire
-title: "Questionnaire for Firstname"
+nav-style: no-results
+title: "Questionnaire in Progress"
 ---
 {% include page-header.html navname="Questionnaire" title=page.title desc="Please complete the questionnaire to continue with the program." %}
 
 <div class="mt-5">
   <div class="shadow rounded-md bg-white">
 
-    <div class="px-4 py-5 sm:p-6">
+    <div class="px-4 py-5 sm:p-6 sm:pb-0">
       <div class="rounded-xl overflow-hidden">
         <div class="flex">
-          <div class="text-xs bg-green-600 text-white px-2" style="width: 65%;">65% Complete</div>
-          <div class="text-xs bg-gray-200" style="width: 35%;">&nbsp;</div>
+          <div class="text-xs bg-gray-200 text-gray-700 px-2" style="width: 65%;">65% Complete</div>
+          <div class="text-xs bg-red-600" style="width: 35%;">&nbsp;</div>
         </div>
       </div>
     </div>

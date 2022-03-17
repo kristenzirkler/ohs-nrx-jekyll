@@ -1,31 +1,110 @@
 ---
 layout: default
-nav: dashboard
-title: "Welcome, Firstname!"
+title: "Page List"
 ---
-{% include page-header.html navname="Dashboard" title=page.title desc="Your personalized portal for optimal health based on your body's unique needs." %}
-{% comment %}
-{% include alert.html headline="New Results Available" text="Please review and let us know if you have questions." hasSwitch=false %}
-<div class="mt-5 bg-white shadow rounded-lg mb-4 overflow-hidden">
-  <div class="p-4">
-    <div class="flex items-center text-sm text-gray-500 pb-4">
-      <svg class="flex-shrink-0 mr-1.5 h-5 w-5 text-gray-400" x-description="Heroicon name: solid/calendar" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-        <path fill-rule="evenodd" d="M6 2a1 1 0 00-1 1v1H4a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V6a2 2 0 00-2-2h-1V3a1 1 0 10-2 0v1H7V3a1 1 0 00-1-1zm0 5a1 1 0 000 2h8a1 1 0 100-2H6z" clip-rule="evenodd"></path>
-      </svg>
-      Report Date: March 7, 2022
-    </div>
-  </div>
-</div>
-{% endcomment %}
+
+{% include page-header.html navname="Directory" title=page.title desc="" %}
 
 <div class="bg-white shadow rounded-lg mt-5 mb-5">
-  <div class="px-4 py-5 sm:p-6">
-  <div class="flex items-center text-sm text-gray-500">
-    <h2 class="text-xl font-bold text-gray-900 mr-2">New Results</h2>
-    March 7, 2022
+  <div class="px-4 py-3">
+    <div class="text-xl font-bold text-gray-900 mr-2">Possible Views</div>
   </div>
-  <p class="leading-6">The Optimal Range defines the most ideal values for blood/urine results. Results outside this range move into a warning range (functional) and can accelerate to clinical levels which can identify more serious health concerns. This program will help move your levels into the Optimal Range.</p>
-  </div>
-  {% include result-summary.html %}
+  <nav class="h-full overflow-y-auto" aria-label="Directory">
+    <div class="relative">
+      <div class="z-10 sticky top-0 border-t border-b border-gray-200 bg-gray-50 px-3 py-1 text-sm font-medium text-gray-500">
+        <h3>Misc</h3>
+      </div>
+      <ul role="list" class="relative z-0 divide-y divide-gray-200">
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/" class="block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            Navigation New
+          </a>
+        </li>
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/" class="block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            Navigation Full
+          </a>
+        </li>
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/login" class="text-green-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            Login
+          </a>
+        </li>
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/sign-up" class="text-green-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            Register
+          </a>
+        </li>
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/" class="block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            Account Information View / Edit
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="relative">
+      <div class="z-10 sticky top-0 border-t border-b border-gray-200 bg-gray-50 px-3 py-1 text-sm font-medium text-gray-500">
+        <h3>Dashboards</h3>
+      </div>
+      <ul role="list" class="relative z-0 divide-y divide-gray-200">
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/dashboard-new" class="text-red-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            No History - Questionnaire is Incomplete
+          </a>
+        </li>
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/dashboard-questionnaire-complete" class="text-red-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            No History - Questionnaire is complete, Blood work is not yet received
+          </a>
+        </li>
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/dashboard-new-results-no-history" class="text-red-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            No History - Results Received & HP Approved
+          </a>
+        </li>
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/dashboard-bloodwork-requested" class="text-red-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            Has History - Time for new bloodwork
+          </a>
+        </li>
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/dashboard-new-results" class="text-red-600 block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            Has History - Results Received & HP Approved
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="relative">
+      <div class="z-10 sticky top-0 border-t border-b border-gray-200 bg-gray-50 px-3 py-1 text-sm font-medium text-gray-500">
+        <h3>Questionnaire</h3>
+      </div>
+      <ul role="list" class="relative z-0 divide-y divide-gray-200">
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/" class="block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            New
+          </a>
+        </li>
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/" class="block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            Incomplete
+          </a>
+        </li>
+        <li class="bg-white">
+          <a href="{{ site.baseurl }}/" class="block hover:bg-gray-50 focus:outline-none font-medium text-gray-900 px-3 py-2">
+            Edit
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
 </div>
+<div class="bg-white shadow rounded-lg mt-5 mb-5">
+  <div class="px-4 py-5 sm:p-6">
+    <div class="text-xl font-bold text-gray-900 mr-2">Theme</div>
+    <p>TBD</p>
+  </div>
+</div>
+
+
+
 

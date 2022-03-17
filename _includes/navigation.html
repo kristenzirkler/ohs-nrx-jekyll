@@ -1,6 +1,6 @@
 {% if page.nav-style != 'limited' %}
 <!-- Current: "bg-gray-100 text-gray-900", Default: "text-gray-600 hover:bg-gray-50 hover:text-gray-900" -->
-<a href="{{ site.baseurl }}/{% if page.nav-style == 'no-results' %}dashboard-new{% endif %}" class="{% if page.nav == "dashboard" %}bg-gray-100 text-gray-900{% else %}text-gray-600 hover:bg-gray-50 hover:text-gray-900{% endif %} group flex items-center px-2 py-2 text-base font-medium rounded-md">
+<a href="{{ site.baseurl }}/{% if page.nav-style == 'no-results' %}dashboard-new{% else %}dashboard-new-results{% endif %}" class="{% if page.nav == "dashboard" %}bg-gray-100 text-gray-900{% else %}text-gray-600 hover:bg-gray-50 hover:text-gray-900{% endif %} group flex items-center px-2 py-2 text-base font-medium rounded-md">
   <!--
     Heroicon name: outline/home
 
@@ -20,6 +20,7 @@
   Results
 </a>
 
+{% if page.nav-style != 'no-history' %}
 <a href="{{ site.baseurl }}/history" class="{% if page.nav == "history" %}bg-gray-100 text-gray-900{% else %}text-gray-600 hover:bg-gray-50 hover:text-gray-900{% endif %} group flex items-center px-2 py-2 text-base font-medium rounded-md">
   <!-- Heroicon name: outline/archive -->
   <svg xmlns="http://www.w3.org/2000/svg" class="{% if page.nav == "history" %}text-gray-500{% else %}text-gray-400 group-hover:text-gray-500{% endif %} mr-4 flex-shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
@@ -27,6 +28,7 @@
 </svg>
   History
 </a>
+{% endif %}
 
 <a href="{{ site.baseurl }}/custompak" class="{% if page.nav == "custompak" %}bg-gray-100 text-gray-900{% else %}text-gray-600 hover:bg-gray-50 hover:text-gray-900{% endif %} group flex items-center px-2 py-2 text-base font-medium rounded-md">
   <!-- Heroicon name: outline/clipboard-check -->

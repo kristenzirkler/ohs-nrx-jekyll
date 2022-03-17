@@ -5,7 +5,7 @@
 {% assign bgClasses = "bg-button-primary hover:bg-button-primary-hover focus:ring-button-primary" %}
 {% endif %}
 {% if include.icon %}
-  <button type="button" class="flex justify-between items-center h-12 px-4 w-full {{ sharedClasses }} {{ bgClasses }}  {{ include.classes }}">
+  {% if include.link %}<a href="{{ site.baseurl }}/{{ include.link }}"{% else %}<button{% endif %} type="button" class="flex justify-between items-center h-12 px-4 w-full {{ sharedClasses }} {{ bgClasses }}  {{ include.classes }}" >
     {{ include.text }}
 
     {% if include.icon == 'right' %}
@@ -14,7 +14,7 @@
       <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
     </svg>
     {% endif %}
-  </button>
+  {% if include.link %}</a>{% else %}</button>{% endif %}
 {% else if include.link %}
   <a class="flex items-center justify-evenly h-12 px-8 {{ sharedClasses }} {{ bgClasses }} {{ include.classes }}" href="{{ site.baseurl }}/{{ include.link }}">
     {{ include.text }}
