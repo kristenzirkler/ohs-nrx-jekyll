@@ -1,6 +1,11 @@
-{% assign sharedClasses = "border border-transparent shadow-sm text-lg font-bold rounded-md text-white bg-button-primary hover:bg-button-primary-hover focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-button-primary" %}
+{% assign sharedClasses = "border border-transparent shadow-sm text-lg font-bold rounded-md text-white focus:outline-none focus:ring-2 focus:ring-offset-2" %}
+{% if include.disabled %}
+{% assign bgClasses = "bg-gray-200 hover:bg-gray-200 focus:ring-gray-200" %}
+{% else %}
+{% assign bgClasses = "bg-button-primary hover:bg-button-primary-hover focus:ring-button-primary" %}
+{% endif %}
 {% if include.icon %}
-  <button type="button" class="{{ sharedClasses }} flex justify-between items-center h-12 px-4 w-full  {{ include.classes }}">
+  <button type="button" class="flex justify-between items-center h-12 px-4 w-full {{ sharedClasses }} {{ bgClasses }}  {{ include.classes }}">
     {{ include.text }}
 
     {% if include.icon == 'right' %}
@@ -11,11 +16,11 @@
     {% endif %}
   </button>
 {% else if include.link %}
-  <a class="flex items-center justify-evenly {{ sharedClasses }} h-12 px-8 {{ include.classes }}" href="{{ site.baseurl }}/{{ include.link }}">
+  <a class="flex items-center justify-evenly h-12 px-8 {{ sharedClasses }} {{ bgClasses }} {{ include.classes }}" href="{{ site.baseurl }}/{{ include.link }}">
     {{ include.text }}
   </a>
 {% else %}
-  <button type="button" class="{{ sharedClasses }} h-12 px-8 {{ include.classes }}" {% if include.link %}href="{{ site.baseurl }}/{{ include.link }}"{% endif %}>
+  <button type="button" class="h-12 px-8 {{ sharedClasses }} {{ bgClasses }} {{ include.classes }}" {% if include.link %}href="{{ site.baseurl }}/{{ include.link }}"{% endif %}>
     {{ include.text }}
   </button>
 {% endif %}
