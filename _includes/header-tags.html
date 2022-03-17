@@ -39,6 +39,34 @@ tailwind.config = {
     },
   }
 }
+
+</script>
+<script src="https://unpkg.com/tailwindcss-jit-cdn"></script>
+
+<script type="module">
+function withOpacity(variableName) {
+  return ({ opacityValue }) => {
+    if (opacityValue !== undefined) {
+      return `rgba(var(${variableName}), ${opacityValue})`
+    }
+    return `rgb(var(${variableName}))`
+  }
+}
+module.exports = {
+  theme: {
+    extend: {
+      backgroundColor: {
+        skin: {
+          fill: withOpacity('--color-fill')
+        },
+      },
+    },
+  },
+  variants: {
+    extend: {},
+  },
+  plugins: [],
+}
 </script>
 <!-- end OHS COMPANY THEME ------------------------------------------ -->
 {% endif %}
